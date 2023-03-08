@@ -211,3 +211,10 @@ The name for the keys will be: RTR_SUMBAWA.sabarmenanti.com
 % The key modulus size is 1024 bits
 % Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
 *Mar 1 1:52:0.695: %SSH-5-ENABLED: SSH 1.99 has been enabled
+
+# Atur SSH Server di Router Sumbawa
+RTR_SUMBAWA(config)#username sabar password menanti
+RTR_SUMBAWA(config)#line vty 0 4
+RTR_SUMBAWA(config-line)#login local
+RTR_SUMBAWA(config-line)#transport input ssh
+RTR_SUMBAWA(config-line)#exit
