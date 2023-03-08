@@ -144,3 +144,11 @@ The name for the keys will be: MSW_MATARAM.sabarmenanti.com
 % The key modulus size is 1024 bits
 % Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
 *Mar 1 0:44:0.713: %SSH-5-ENABLED: SSH 1.99 has been enabled
+
+# Atur SSH Server di Multilayer Switch Mataram
+MSW_MATARAM(config)#username sabar password menanti
+MSW_MATARAM(config)#line vty 0 4
+MSW_MATARAM(config-line)#login local
+MSW_MATARAM(config-line)#trans
+MSW_MATARAM(config-line)#transport input ssh
+MSW_MATARAM(config-line)#end
