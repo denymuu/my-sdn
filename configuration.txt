@@ -61,3 +61,28 @@ RTR_MATARAM(config)#ip dhcp excluded-address 192.168.1.253 192.168.1.254
 RTR_MATARAM(config)#router eigrp 64512
 RTR_MATARAM(config-router)#network 192.168.1.0
 RTR_MATARAM(config-router)#network 192.168.0.0
+
+# Melihat verifikasi konfigurasi dan save konfigurasi di Router Mataram
+RTR_MATARAM(config)#do sh ip protocols
+
+Routing Protocol is "eigrp  64512 " 
+  Outgoing update filter list for all interfaces is not set 
+  Incoming update filter list for all interfaces is not set 
+  Default networks flagged in outgoing updates  
+  Default networks accepted from incoming updates 
+  EIGRP metric weight K1=1, K2=0, K3=1, K4=0, K5=0
+  EIGRP maximum hopcount 100
+  EIGRP maximum metric variance 1
+Redistributing: eigrp 64512
+  Automatic network summarization is not in effect  
+  Maximum path: 4
+  Routing for Networks:  
+     192.168.1.0
+     192.168.0.0
+  Routing Information Sources:  
+    Gateway         Distance      Last Update 
+  Distance: internal 90 external 170
+
+RTR_MATARAM(config)#do copy run start
+Destination filename [startup-config]? 
+Building configuration...
