@@ -56,3 +56,8 @@ RTR_MATARAM(dhcp-config)#dns-server 192.168.1.253
 RTR_MATARAM(dhcp-config)#ex
 RTR_MATARAM(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.2
 RTR_MATARAM(config)#ip dhcp excluded-address 192.168.1.253 192.168.1.254
+
+# Konfigurasi Router EIGRP dengan nomor AS 64512 di Router Mataram
+RTR_MATARAM(config)#router eigrp 64512
+RTR_MATARAM(config-router)#network 192.168.1.0
+RTR_MATARAM(config-router)#network 192.168.0.0
