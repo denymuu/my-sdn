@@ -134,3 +134,13 @@ Vlan1 is up, line protocol is up
 
 MSW_MATARAM(config)#do sh run | include ip default-gateway
 ip default-gateway 192.168.1.1
+
+# Konfigurasi password Previledge dan SSH Server di Multilayer Switch Mataram
+MSW_MATARAM(config)#enable secret menanti
+MSW_MATARAM(config)#ip domain-name sabarmenanti.com
+MSW_MATARAM(config)#crypto key generate rsa general-keys modulus 1024
+The name for the keys will be: MSW_MATARAM.sabarmenanti.com
+
+% The key modulus size is 1024 bits
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+*Mar 1 0:44:0.713: %SSH-5-ENABLED: SSH 1.99 has been enabled
