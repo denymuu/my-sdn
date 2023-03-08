@@ -201,3 +201,13 @@ GigabitEthernet0/0/2   unassigned      YES unset  administratively down down
 Serial0/1/0            192.168.0.2     YES manual up                    up 
 Serial0/1/1            192.168.0.5     YES manual down                  down 
 Vlan1                  unassigned      YES unset  administratively down down
+
+# Konfigurasi password Previledge dan SSH Server di Router Sumbawa
+RTR_SUMBAWA(config)#enable secret menanti
+RTR_SUMBAWA(config)#ip domain-name sabarmenanti.com
+RTR_SUMBAWA(config)#crypto key generate rsa general-keys modulus 1024
+The name for the keys will be: RTR_SUMBAWA.sabarmenanti.com
+
+% The key modulus size is 1024 bits
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+*Mar 1 1:52:0.695: %SSH-5-ENABLED: SSH 1.99 has been enabled
