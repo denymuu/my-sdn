@@ -191,3 +191,13 @@ RTR_SUMBAWA(config-if)#ip addr 192.168.0.5 255.255.255.252
 RTR_SUMBAWA(config-if)#no sh
 
 %LINK-5-CHANGED: Interface Serial0/1/1, changed state to down
+
+# Verifikasi IP Address pada masing-masing interface di Router Sumbawa
+RTR_SUMBAWA(config)#do sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0/0   192.168.2.1     YES manual up                    up 
+GigabitEthernet0/0/1   unassigned      YES unset  administratively down down 
+GigabitEthernet0/0/2   unassigned      YES unset  administratively down down 
+Serial0/1/0            192.168.0.2     YES manual up                    up 
+Serial0/1/1            192.168.0.5     YES manual down                  down 
+Vlan1                  unassigned      YES unset  administratively down down
