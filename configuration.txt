@@ -47,3 +47,12 @@ RTR_MATARAM(config)#line vty 0 4
 RTR_MATARAM(config-line)#login local
 RTR_MATARAM(config-line)#transport input ssh
 RTR_MATARAM(config-line)#exit
+
+# Atur DHCP Pool dan Excluded Address di Router Mataram
+RTR_MATARAM(config)#ip dhcp pool MATARAM
+RTR_MATARAM(dhcp-config)#network 192.168.1.0 255.255.255.0
+RTR_MATARAM(dhcp-config)#default-router 192.168.1.1
+RTR_MATARAM(dhcp-config)#dns-server 192.168.1.253
+RTR_MATARAM(dhcp-config)#ex
+RTR_MATARAM(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.2
+RTR_MATARAM(config)#ip dhcp excluded-address 192.168.1.253 192.168.1.254
