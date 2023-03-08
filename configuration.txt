@@ -30,3 +30,13 @@ Serial0/1/0            192.168.0.1     YES manual down                  down
 Serial0/1/1            unassigned      YES unset  administratively down down 
 Vlan1                  unassigned      YES unset  administratively down down
 RTR_MATARAM(config-if)#ex
+
+# Atur Password Previledge dan SSH Server di Router Mataram
+RTR_MATARAM(config)#enable secret menanti
+RTR_MATARAM(config)#ip domain-name sabarmenanti.com
+RTR_MATARAM(config)#crypto key generate rsa general-keys modulus 1024
+The name for the keys will be: RTR_MATARAM.sabarmenanti.com
+
+% The key modulus size is 1024 bits
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+*Feb 28 23:13:59.28: %SSH-5-ENABLED: SSH 1.99 has been enabled
