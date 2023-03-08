@@ -20,4 +20,13 @@ RTR_MATARAM(config-if)#int se0/1/0
 RTR_MATARAM(config-if)#ip addr 192.168.0.1 255.255.255.252
 RTR_MATARAM(config-if)#no sh
 
-
+# Cek alamat IP interface
+RTR_MATARAM(config-if)#do sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0/0   192.168.1.1     YES manual up                    up 
+GigabitEthernet0/0/1   unassigned      YES unset  administratively down down 
+GigabitEthernet0/0/2   unassigned      YES unset  administratively down down 
+Serial0/1/0            192.168.0.1     YES manual down                  down 
+Serial0/1/1            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+RTR_MATARAM(config-if)#ex
