@@ -152,3 +152,9 @@ MSW_MATARAM(config-line)#login local
 MSW_MATARAM(config-line)#trans
 MSW_MATARAM(config-line)#transport input ssh
 MSW_MATARAM(config-line)#end
+
+# Simpan konfigurasi di Multilayer Switch Mataram
+MSW_MATARAM#copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
