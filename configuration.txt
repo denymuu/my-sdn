@@ -86,3 +86,11 @@ Redistributing: eigrp 64512
 RTR_MATARAM(config)#do copy run start
 Destination filename [startup-config]? 
 Building configuration...
+
+2. Konfigurasi Multilayer Switch Mataram
+# Mengatur Hostname Multilayer Switch Mataram
+Switch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname MSW_MATARAM
+
