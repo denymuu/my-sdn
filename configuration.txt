@@ -218,3 +218,10 @@ RTR_SUMBAWA(config)#line vty 0 4
 RTR_SUMBAWA(config-line)#login local
 RTR_SUMBAWA(config-line)#transport input ssh
 RTR_SUMBAWA(config-line)#exit
+
+#Atur DHCP Server di Router Sumbawa
+RTR_SUMBAWA(config)#ip dhcp pool SUMBAWA
+RTR_SUMBAWA(dhcp-config)#network 192.168.2.0 255.255.255.0
+RTR_SUMBAWA(dhcp-config)#default-router 192.168.2.1
+RTR_SUMBAWA(dhcp-config)#dns-server 192.168.1.253
+RTR_SUMBAWA(dhcp-config)#exit
