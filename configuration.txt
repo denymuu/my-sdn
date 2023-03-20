@@ -225,3 +225,4 @@ RTR_SUMBAWA(dhcp-config)#network 192.168.2.0 255.255.255.0
 RTR_SUMBAWA(dhcp-config)#default-router 192.168.2.1
 RTR_SUMBAWA(dhcp-config)#dns-server 192.168.1.253
 RTR_SUMBAWA(dhcp-config)#exit
+RTR_SUMBAWA(config)#ip dhcp excluded-address 192.168.2.1 192.168.1.2
