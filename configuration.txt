@@ -235,3 +235,9 @@ RTR_SUMBAWA(config-router)#
 %DUAL-5-NBRCHANGE: IP-EIGRP 64512: Neighbor 192.168.0.1 (Serial0/1/0) is up: new adjacency
 
 RTR_SUMBAWA(config-router)#end
+
+#Atur hostname di Multilayer Switch Sumbawa
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname MSW_SUMBAWA
