@@ -245,4 +245,13 @@ Switch(config)#hostname MSW_SUMBAWA
 #Atur IP Default Gateway di Multilayer Switch Sumbawa
 MSW_SUMBAWA(config)#ip default-gateway 192.168.2.1
 
+#Atur Password Previledge dan SSH Server di Multilayer Switch Sumbawa
+MSW_SUMBAWA(config)#enable secret menanti
+MSW_SUMBAWA(config)#ip domain-name sabarmenanti.com
+MSW_SUMBAWA(config)#crypto key generate rsa general-keys modulus 1024
+MSW_SUMBAWA(config)#user sabar password menanti
+MSW_SUMBAWA(config)#line vty 0 4
+MSW_SUMBAWA(config-line)#login local
+MSW_SUMBAWA(config-line)#transport input ssh
+MSW_SUMBAWA(config-line)#end
 
