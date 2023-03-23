@@ -241,3 +241,8 @@ Switch>enable
 Switch#conf t
 Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#hostname MSW_SUMBAWA
+
+#Atur IP Default Gateway di Multilayer Switch Sumbawa
+MSW_SUMBAWA(config)#ip default-gateway 192.168.2.1
+
+
