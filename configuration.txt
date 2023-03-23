@@ -226,3 +226,12 @@ RTR_SUMBAWA(dhcp-config)#default-router 192.168.2.1
 RTR_SUMBAWA(dhcp-config)#dns-server 192.168.1.253
 RTR_SUMBAWA(dhcp-config)#exit
 RTR_SUMBAWA(config)#ip dhcp excluded-address 192.168.2.1 192.168.1.2
+
+#Atur Routing EIGRP di Router Sumbawa
+RTR_SUMBAWA(config)#router eigrp 64512
+RTR_SUMBAWA(config-router)#network 192.168.2.0
+RTR_SUMBAWA(config-router)#network 192.168.0.0
+RTR_SUMBAWA(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 64512: Neighbor 192.168.0.1 (Serial0/1/0) is up: new adjacency
+
+RTR_SUMBAWA(config-router)#end
